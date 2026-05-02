@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DDL Agent — 自然语言日程管理</title>
-  <meta name="description" content="用说话的方式管理日程和待办。AI 理解你的自然语言，生成结构化提案，你确认后才写入。" />
+  <meta name="description" content="纯本地运行的 AI 日程助手。用说话的方式管理日程和待办，数据完全留在你的设备上。" />
   <style>
     /* ================================================================ */
     /* Design Tokens — 4 colors: bg / panel / ink / accent              */
@@ -126,6 +126,19 @@
     .btn-secondary:hover { background: #f9fafb; }
 
     .btn-icon { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .btn-badge {
+      display: inline-flex;
+      align-items: center;
+      height: 24px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.22);
+      font-size: 12px;
+      font-weight: 760;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
 
     /* ================================================================ */
     /* Phone Mockup                                                      */
@@ -561,14 +574,13 @@
       <p class="eyebrow">DDL Agent</p>
       <h1>用<em>说话</em>的方式<br>管理你的日程</h1>
       <p class="hero-desc">
-        AI 理解你的自然语言 — "明天下午三点上地理课"、
-        "周五前交作业" — 自动生成结构化提案，
-        你确认后才写入。AI 决不会直接修改你的数据。
+        纯本地运行的 AI 日程助手。无后端服务，数据完全留在你的设备上。
+        需自行获取阿里云 API Key 开启语音识别，AI 推理通过你的 Key 直接在设备端完成。
       </p>
       <div class="btn-group">
         <a class="btn btn-primary" href="downloads/DDLAgent-v0.2.3.apk" download>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          下载 Android APK
+          下载 Android APK <span class="btn-badge">最新版 v0.2.3</span>
         </a>
         <a class="btn btn-secondary" href="https://github.com/freecodetiger/fucktheddl" target="_blank" rel="noopener">
           <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -678,7 +690,7 @@
       <h2>下载 DDL Agent</h2>
       <p class="version">v0.2.3 · Android 8.0+ · 约 45 MB</p>
       <p style="font-size:14px;color:var(--muted);max-width:480px;">
-        首次使用需验证邮箱。可在设置中填入自己的 DeepSeek API Key。
+        纯本地运行，需自行获取阿里云 API Key 以使用语音识别功能。
       </p>
     </div>
     <img class="qr"
@@ -696,7 +708,7 @@
         <div class="feature-label">核心特色</div>
         <h3>数据完全本地化</h3>
         <hr>
-        <p>所有日程和待办都存在你的手机上，离线可用，不依赖服务端存储。后端只是 AI 推理网关 — 你的数据从不上传。</p>
+        <p>无后端服务，所有数据仅存储在本地设备上，完全离线可用。AI 推理直接调用阿里云 API，不经过任何中间服务器。</p>
       </div>
       <div class="feature">
         <div class="feature-label">交互</div>
@@ -718,9 +730,9 @@
       </div>
       <div class="feature">
         <div class="feature-label">费用</div>
-        <h3>自带 API Key</h3>
+        <h3>自带阿里云 Key</h3>
         <hr>
-        <p>在设置中填入你的 DeepSeek Key，按量付费，费用和用量完全由你掌控。</p>
+        <p>在设置中填入你的阿里云 API Key，语音识别按量付费，费用和用量完全由你掌控。</p>
       </div>
       <div class="feature">
         <div class="feature-label">视觉</div>
